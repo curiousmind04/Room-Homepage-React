@@ -1,0 +1,54 @@
+.backdrop {
+  background-color: hsl(0, 1%, 24%);
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 3rem 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > img {
+  cursor: pointer;
+}
+
+.container > ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.container > ul a {
+  color: hsl(0, 0%, 0%);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 21.5rem) {
+  .container {
+    padding: 1.4rem 1.4rem 2rem 1.4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .container > ul {
+    gap: 1rem;
+  }
+}

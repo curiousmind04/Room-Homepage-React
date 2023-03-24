@@ -1,0 +1,31 @@
+.dark,
+.light {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.dark > img,
+.light > img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.info {
+  width: 100%;
+  padding: 3.4rem 2rem 2.6rem 2rem;
+}
+
+.info > h1 {
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.info > p {
+  color: hsl(0, 0%, 63%);
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+}

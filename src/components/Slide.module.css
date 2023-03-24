@@ -4,9 +4,14 @@
   position: relative;
 }
 
-.hero > .image {
+.hero > .mobile {
   width: 100%;
   vertical-align: bottom;
+}
+
+.hero > .desktop,
+.menu {
+  display: none;
 }
 
 .hero > .hamburger {
@@ -55,6 +60,7 @@
   font-weight: 700;
   letter-spacing: -0.1rem;
   margin-bottom: 1rem;
+  max-width: 25.3rem;
 }
 
 .info > p {
@@ -62,11 +68,14 @@
   font-size: 0.95rem;
   line-height: 1.4rem;
   margin-bottom: 2.6rem;
+  max-width: 25.3rem;
 }
 
 .shop {
   color: hsl(0, 0%, 0%);
-  width: fit-content;
+  /* width: fit-content; */
+  width: 100%;
+  max-width: 25.3rem;
   display: flex;
   gap: 1.2rem;
   text-decoration: none;
@@ -80,9 +89,114 @@
   letter-spacing: 0.7rem;
 }
 
+@media (hover: hover) {
+  .hero > .actions > div:hover {
+    background-color: hsl(0, 0%, 27%);
+  }
+  .shop:hover p {
+    color: hsl(0, 0%, 63%);
+  }
+  .shop:hover svg path {
+    fill: hsl(0, 0%, 63%);
+  }
+  .menu a:hover ~ .line {
+    display: block;
+  }
+}
+
 @media (max-width: 18.5rem) {
+  .info > h2 {
+    font-size: 2rem;
+  }
   .shop {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+@media (min-width: 58.5rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 59% 41%;
+  }
+  .hero > .mobile {
+    display: none;
+  }
+  .hero > .desktop {
+    display: inline-block;
+    width: 100%;
+    vertical-align: bottom;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  .hero > .hamburger {
+    display: none;
+  }
+  .hero > .logo {
+    top: 4rem;
+    left: 4rem;
+  }
+  .menu {
+    height: 1.5rem;
+    display: block;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    top: 4rem;
+    left: 11.5rem;
+    list-style: none;
+  }
+  .menu li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu .line {
+    background-color: hsl(0, 0%, 100%);
+    height: 2px;
+    width: 60%;
+    display: none;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 2.5rem 1rem;
+  }
+  .info > p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .hero > .actions {
+    right: -7rem;
+  }
+  .info > h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .hero > .actions {
+    right: -10rem;
+  }
+  .hero > .actions > div {
+    width: 5rem;
+  }
+  .hero > .actions > div > img {
+    scale: 1;
+  }
+  .info > h2 {
+    font-size: 3rem;
   }
 }

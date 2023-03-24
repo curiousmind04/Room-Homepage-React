@@ -17,15 +17,64 @@
 }
 
 .info > h1 {
+  max-width: 30.5rem;
   font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.35rem;
+  line-height: 1.3rem;
   text-transform: uppercase;
   margin-bottom: 1.1rem;
 }
 
 .info > p {
+  max-width: 30.5rem;
   color: hsl(0, 0%, 63%);
   font-size: 0.95rem;
   line-height: 1.4rem;
+}
+
+@media (min-width: 58.5rem) {
+  .light,
+  .light > img {
+    height: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+  }
+  .info {
+    padding: 1.4rem 1rem 1rem 1rem;
+  }
+  .info > h1 {
+    margin-bottom: 0.8rem;
+  }
+  .info > p {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info > h1 {
+    width: 100%;
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 29.85% auto 29.85%;
+  }
+  .info > p {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+  }
 }

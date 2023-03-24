@@ -34,19 +34,37 @@ function Slide() {
           <img
             src="/images/mobile-image-hero-1.jpg"
             alt="image 1"
-            className={classes.image}
+            className={classes.mobile}
+            hidden={slide === 1 ? false : true}
+          />
+          <img
+            src="/images/desktop-image-hero-1.jpg"
+            alt="image 1"
+            className={classes.desktop}
             hidden={slide === 1 ? false : true}
           />
           <img
             src="/images/mobile-image-hero-2.jpg"
             alt="image 2"
-            className={classes.image}
+            className={classes.mobile}
+            hidden={slide === 2 ? false : true}
+          />
+          <img
+            src="/images/desktop-image-hero-2.jpg"
+            alt="image 2"
+            className={classes.desktop}
             hidden={slide === 2 ? false : true}
           />
           <img
             src="/images/mobile-image-hero-3.jpg"
             alt="image 3"
-            className={classes.image}
+            className={classes.mobile}
+            hidden={slide === 3 ? false : true}
+          />
+          <img
+            src="/images/desktop-image-hero-3.jpg"
+            alt="image 3"
+            className={classes.desktop}
             hidden={slide === 3 ? false : true}
           />
           <img
@@ -56,20 +74,30 @@ function Slide() {
             onClick={modalHandler}
           />
           <img src="/images/logo.svg" alt="logo" className={classes.logo} />
+          <ul className={classes.menu}>
+            <li>
+              <a href="#">home</a>
+              <div className={classes.line}></div>
+            </li>
+            <li>
+              <a href="#">shop</a>
+              <div className={classes.line}></div>
+            </li>
+            <li>
+              <a href="#">about</a>
+              <div className={classes.line}></div>
+            </li>
+            <li>
+              <a href="#">contact</a>
+              <div className={classes.line}></div>
+            </li>
+          </ul>
           <div className={classes.actions}>
-            <div className={classes.left}>
-              <img
-                src="/images/icon-angle-left.svg"
-                alt="angle left icon"
-                onClick={prevSlideHandler}
-              />
+            <div className={classes.left} onClick={prevSlideHandler}>
+              <img src="/images/icon-angle-left.svg" alt="angle left icon" />
             </div>
-            <div className={classes.right}>
-              <img
-                src="/images/icon-angle-right.svg"
-                alt="angle right icon"
-                onClick={nextSlideHandler}
-              />
+            <div className={classes.right} onClick={nextSlideHandler}>
+              <img src="/images/icon-angle-right.svg" alt="angle right icon" />
             </div>
           </div>
         </div>

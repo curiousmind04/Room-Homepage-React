@@ -52,3 +52,12 @@
     gap: 1rem;
   }
 }
+
+@media (min-width: 58.5rem) {
+  .backdrop {
+    display: none;
+  }
+  .container {
+    display: none;
+  }
+}

@@ -16,7 +16,25 @@
 
 body {
   font-family: "League Spartan", sans-serif;
-  /* font-size: 0.75rem; */
   min-height: 100vh;
   position: relative;
+}
+
+main {
+  max-width: 26rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 58.5rem) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > div {
+    width: 100%;
+  }
+  main {
+    max-width: 100%;
+  }
 }

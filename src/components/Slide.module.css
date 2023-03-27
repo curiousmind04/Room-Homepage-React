@@ -66,7 +66,7 @@
   max-width: 25.3rem;
 }
 
-.info p {
+.info > div > p {
   color: hsl(0, 0%, 63%);
   font-size: 0.95rem;
   line-height: 1.4rem;
@@ -175,7 +175,7 @@
     text-align: left;
     padding: 2.5rem 1rem;
   }
-  .info p {
+  .info > div > p {
     margin-bottom: 1.5rem;
   }
 }

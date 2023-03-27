@@ -35,7 +35,9 @@
 
 @media (min-width: 58.5rem) {
   .light,
-  .light > img {
+  .dark,
+  .light > img,
+  .dark > img {
     height: 100%;
   }
   .container {
